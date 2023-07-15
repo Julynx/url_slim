@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "URL Slim",
+  "version": "1.0",
+  "description": "Browser extension to effortlessly streamline your URLs.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    "style.css"
+  ],
+  "permissions": [
+    "tabs",
+    "clipboardWrite"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_title": "Copy clean URL",
+    "default_popup": "popup.html"
+  }
+}

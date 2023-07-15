@@ -1,0 +1,32 @@
+body {
+    background-color: #343b41;
+}
+
+button {
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #0d6efd;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #f9f8fa;
+    border-color: #0d6efd;
+    white-space: nowrap;
+}
+
+button:hover {
+    color: #343b41;
+    background-color: #86b7fe;
+    border-color: #86b7fe;
+}
+
+/*
+    blue = #0d6efd
+    white = #f9f8fa
+    grey = #343b41
+*/
