@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       // Extra cleaning
-      clean_url = url.href;
+      clean_url = url.href.split("#")[0];
 
       // -- Amazon URLs have an extra "/ref=" parameter to be removed
       if (clean_url.startsWith("https://www.amazon")) {
