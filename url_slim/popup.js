@@ -56,8 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
         copyButton.innerText = 'Copied!';
 
         setTimeout(function () {
-          // Close the popup
-          window.close();
           copyButton.innerText = 'Copy clean URL';
         }, 750);
 
