@@ -42,16 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
       // Extra cleaning
       clean_url = url.href.split("#")[0];
 
-      // -- Remove http(s) and www from the beginning of the URL
-      if (clean_url.startsWith("https://")) {
-        clean_url = clean_url.slice("https://".length);
-      } else if (clean_url.startsWith("http://")) {
-        clean_url = clean_url.slice("http://".length);
-      }
-      if (clean_url.startsWith("www.")) {
-        clean_url = clean_url.slice("www.".length);
-      }
-
       // -- Amazon URLs have an extra "/ref=" parameter to be removed
       if (clean_url.startsWith("https://www.amazon")) {
         clean_url = clean_url.split("/ref=")[0];
