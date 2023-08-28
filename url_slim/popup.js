@@ -58,6 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
         clean_url = clean_url.split("/data=")[0];
       }
 
+      // Final removal of the trailing slash
+      if (clean_url.endsWith("/")) {
+        clean_url = clean_url.slice(0, -1);
+      }
+
       navigator.clipboard.writeText(clean_url).then(function () {
         copyButton.innerText = 'Copied!';
 
