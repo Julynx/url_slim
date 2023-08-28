@@ -58,6 +58,16 @@ document.addEventListener('DOMContentLoaded', function () {
         clean_url = clean_url.split("/data=")[0];
       }
 
+      // -- Etsy URLs have extra parameters after the listing ID to be removed
+      else if (clean_url.startsWith("https://www.etsy") && clean_url.includes("/listing/")) {
+        var url_parts = clean_url.split("/");
+        var listing_index = url_parts.indexOf("listing");
+        if (url_parts.length > listing_index + 1) {
+          url_parts.splice(listing_index + 2, url_parts.length - listing_index - 2);
+        }
+        clean_url = url_parts.join("/");
+      }
+
       // Final removal of the trailing slash
       if (clean_url.endsWith("/")) {
         clean_url = clean_url.slice(0, -1);
