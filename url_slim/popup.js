@@ -45,6 +45,12 @@ document.addEventListener('DOMContentLoaded', function () {
       // -- Amazon URLs have an extra "/ref=" parameter to be removed
       if (clean_url.startsWith("https://www.amazon")) {
         clean_url = clean_url.split("/ref=")[0];
+        // ---- URLs can be minimized removing everything before "/dp/"
+        if (clean_url.includes("/dp/")) {
+          var url_parts = clean_url.split("/");
+          url_parts.splice(3, url_parts.indexOf("dp") - 3);
+          clean_url = url_parts.join("/");
+        }
       }
 
       // -- Google Maps URLs have an extra "/data=" parameter to be removed
