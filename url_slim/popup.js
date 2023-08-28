@@ -68,6 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
         clean_url = url_parts.join("/");
       }
 
+      // -- Wish URLs can be minimized removing everything before "/product/"
+      else if (clean_url.startsWith("https://www.wish") && clean_url.includes("/product/")) {
+        var url_parts = clean_url.split("/");
+        url_parts.splice(3, url_parts.indexOf("product") - 3);
+        clean_url = url_parts.join("/");
+      }
+
       // Final removal of the trailing slash
       if (clean_url.endsWith("/")) {
         clean_url = clean_url.slice(0, -1);
