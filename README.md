@@ -10,7 +10,7 @@
 
 ## How to install
 
-1) Download the [<kbd> ↓ url_slim.zip </kbd>](https://github.com/Julynx/url_slim/releases/download/1.0/url_slim.zip) extension and extract the folder to a safe place.
+1) Download the [<kbd> ⬇️ url_slim.zip </kbd>](https://github.com/Julynx/url_slim/releases/download/1.0/url_slim.zip) extension and extract the folder to a safe place.
 
 2) Visit ```chrome://extensions``` and enable ```Developer mode```.
 <img width="480" src="https://i.imgur.com/4nbKc1O.png">
